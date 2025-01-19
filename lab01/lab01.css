@@ -10,11 +10,17 @@ span{
 h1{
     color: #0A3981
 }
-.container{
+.container {
     display: flex;
-    width: 100%
-    flex-direction: column;
+    width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+    .photo1, .photo2, .photo3, .photo4 {
+        flex: 100%; 
+    }
 }
 .main{
     margin: auto;
@@ -27,9 +33,5 @@ h1{
     margin:auto;
     width: 80%;
     display: flex;
-    flex: 50%;
+    flex: 10%;
 }
-@media (max-width: 800px) {
-    .photo1, .photo2, .photo3, .photo4 {
-      flex: 100%;}
-    }
