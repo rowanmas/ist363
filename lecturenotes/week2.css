@@ -1,0 +1,44 @@
+.transform {
+    transition: 1s; /*time taken to make transition*/
+}
+.transform:hover {
+    background-color: salmon; /*needs a QUE/Trigger (hover)*/
+}
+.transform {
+    transform: translate(200px); 
+}
+.transform{
+    transform: scale(2); /*grow*/
+}
+.transform {
+    transform: rotate(90deg);} /*rotate*/
+
+.circle {
+    width: 100px;
+    padding: 50px 0; /*removing height and using padding instead put the text in the center of the circle*/
+    background-color: red;
+    border-radius: 50px;
+    margin: 0 auto;
+    line-height: 0px; /*how much space should be taken up for text?*/
+    text-align:center;
+    transition: 1s;}
+
+.circle:hover {
+    background-color: orange;
+    transform: rotate(360deg);
+
+}
+
+.otto {
+animation-name: scooter;
+animation-duration: 5s;
+animation-fill-mode: forwards; /*"backwards" would make it return to the start*/
+position: absolute;
+left:-150px;
+animation-iteration-count: x; /* how many times the animation will be performed*/
+}
+@keyframes scooter {
+    from {transform: translateX(-200)}
+    to{transform: translateX(2000px)}
+    
+}
