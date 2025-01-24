@@ -1,0 +1,95 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #E38E49 ;
+    justify-content: center; 
+}
+strong{
+    color: #E38E49;
+}
+h1{
+    color: #0A3981;
+    font-weight: 600;
+}
+.container div{
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+    min-width: 200px;
+
+}
+
+.main{
+    background-color: #D4EBF8;
+    padding: 5%;
+    margin: 3%;
+    border-radius:1%;
+}
+
+.submit{
+   border-radius: 25px;
+   color:#E38E49;
+   background-color: white; 
+   padding: 20px;
+   display: inline-block;
+   transition: 1s;
+   animation-fill-mode: backwards;
+  
+
+}
+.submit:hover{
+    background-color: #E38E49;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+.submit:focus{
+    animation: stay 0.5s forwards;
+}
+.submit:focus::after{
+    content: "✓";
+    position:absolute;
+    right: 65px;
+    bottom:17px;
+    margin-left: 10px;
+    color:white;
+    font-size: 18px;}
+
+    
+
+@keyframes stay {
+    0% {
+       background-color: #E38E49;
+       color: white;
+       transform: translateY(0px);
+       transform:scale(1.1);
+    }
+    100% {
+       background-color: #E38E49;
+       color: white; 
+       transform: translateY(0);
+       transform:scale(1.1);
+    }}
+
+
+h1 {
+    animation-name: scooter;
+    animation-duration: 8s;
+    animation-fill-mode: forwards; /*"backwards" would make it return to the start*/
+
+    animation-iteration-count: x; /* how many times the animation will be performed*/
+    }
+    @keyframes scooter {
+        0%{transform: translateY(-200px);}
+        30%{transform: translateY(0px);}
+        40%{transform:rotateY(180deg);}
+        50%{transform:rotateY(360deg);}  
+        75%{transform: scale(1.2)}
+    }
+
