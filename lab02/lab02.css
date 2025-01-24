@@ -40,7 +40,7 @@ img {
    display: inline-block;
    transition: 1s;
    animation-fill-mode: backwards;
-  
+   position: relative;
 
 }
 .submit:hover{
@@ -48,6 +48,10 @@ img {
     color: white;
     transform: scale(1.1);
     transition: 0.8s;
+}
+.submit:active, .submit:focus{
+    background-color: #E38E49;
+    color: white;
 }
 .submit:focus{
     animation: stay 0.5s forwards;
@@ -59,26 +63,23 @@ img {
     bottom:17px;
     margin-left: 10px;
     color:white;
-    font-size: 18px;}
-.submit:focus:not(:hover) {
-    transform: scale(0.8); /* Scales down slightly when the mouse leaves */
-     }
-    
+    font-size: 18px;
+    animation: animate 0.5 ease-in-out forwards;}
 
-@keyframes stay {
-    0% {
-       background-color: #E38E49;
-       color: white;
-       transform: translateY(0px);
-       transform:scale(1.1);
+
+
+    @keyframes animate {
+
+        0% {
+            transform: scale(0.5);
+            
+        }
+
+        100% {
+            transform: scale(1);
+            
+        }
     }
-    100% {
-       background-color: #E38E49;
-       color: white; 
-       transform: translateY(0);
-       transform:scale(1.1);
-    }}
-
 
 
 h1 {
