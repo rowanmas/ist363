@@ -60,7 +60,9 @@ img {
     margin-left: 10px;
     color:white;
     font-size: 18px;}
-
+.submit:focus:not(:hover) {
+    transform: scale(0.8); /* Scales down slightly when the mouse leaves */
+     }
     
 
 @keyframes stay {
@@ -76,6 +78,7 @@ img {
        transform: translateY(0);
        transform:scale(1.1);
     }}
+
 
 
 h1 {
