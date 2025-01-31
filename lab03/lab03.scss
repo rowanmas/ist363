@@ -1,0 +1,151 @@
+$orange: #e89b6a;
+$lime: #e4fdc3;
+$mint: #8ae2c8;
+$melon: #e2625c;
+
+@mixin default {
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+@mixin recipe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px;
+    img{
+        width:100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;};
+}
+
+@mixin shadow {
+    margin: 10px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 10%;
+}
+
+header{
+    @include default;
+    background-color: $orange;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.newsletter {
+    background-color: $lime;
+}
+
+.footer {
+    @include default;
+    background-color: $mint;
+    padding-bottom: 5px;
+}
+
+.latest, .older {
+    h2{color: $melon;}
+    p {
+        color: $melon;
+        font-weight: bold;
+    }
+}
+
+.about {
+    text-align: center;
+    h2{color:$melon}
+}
+.big_image img{
+    border-radius: 10px;
+  }
+.newsletter {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.button{
+    border-radius: 5px;
+    color: white;
+    background-color:#e89b6a; 
+    display: inline-block;
+    padding: 8px;
+    position:relative;
+    
+}
+
+.latest, .older {
+    @include recipe;
+}
+
+.latest div, .older div{
+    @include shadow
+}
+
+.older {
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.big_image {
+    img{width: 100%;}
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    p {
+        text-align: center;
+    }
+    border: 2px white;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    margin:0;
+}
+nav span{
+    margin: 10px;
+}
+nav span:hover{
+    transform: scale(1.2);
+    animation-duration: .5;
+}
+footer span{
+    margin: 10px
+}
+.LR{
+    position: absolute;
+}
+input[type="tel"] {
+    border: 2px solid $orange;
+    border-radius: 5px;
+  }
+@media only screen and (max-width: 600px) {
+    @mixin recipe2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 15px;
+        img{
+            width:100%;
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+        }
+    }
+
+    .latest, .older {
+        @include recipe;
+        flex-wrap: wrap;
+    }
+}

@@ -66,34 +66,30 @@ img {
     font-size: 18px;
     animation: animate 0.5 ease-in-out forwards;}
 
-
-
-    @keyframes animate {
-
-        0% {
-            transform: scale(0.5);
-            
+    @keyframes name {
+        0% {transform: translateY(-500px)}
+        30% {transform: translateY(0px)}
+        40% {
+            transform: rotateY(180deg);
         }
-
-        100% {
-            transform: scale(1);
-            
+        50% {
+            transform: rotateY(360deg);
         }
+        60% {
+            transform: scale(1.2);
+        }
+        80% {transform: scale(1);}
     }
-
-
-h1 {
-    animation-name: scooter;
-    animation-duration: 8s;
-    animation-fill-mode: forwards; /*"backwards" would make it return to the start*/
-
-    animation-iteration-count: x; /* how many times the animation will be performed*/
+    .name {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        padding-bottom: 0%;
     }
-    @keyframes scooter {
-        0%{transform: translateY(-200px);}
-        30%{transform: translateY(0px);}
-        40%{transform:rotateY(180deg);}
-        50%{transform:rotateY(360deg);}  
-        75%{transform: scale(1.2)}
+    h1 {
+        color: #0A3981;
+        font-weight: 600;
+        position: relative;
+        transform-origin: 100px;
+        animation: name 5s ease-in forwards;
     }
-

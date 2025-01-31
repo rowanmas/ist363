@@ -1,0 +1,142 @@
+header {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #e89b6a;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.newsletter {
+  background-color: #e4fdc3;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #8ae2c8;
+  padding-bottom: 5px;
+}
+
+.latest h2, .older h2 {
+  color: #e2625c;
+}
+.latest p, .older p {
+  color: #e2625c;
+  font-weight: bold;
+}
+
+.about {
+  text-align: center;
+}
+.about h2 {
+  color: #e2625c;
+}
+
+.big_image img {
+  border-radius: 10px;
+}
+
+.newsletter {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.button {
+  border-radius: 5px;
+  color: white;
+  background-color: #e89b6a;
+  display: inline-block;
+  padding: 8px;
+  position: relative;
+}
+
+.latest, .older {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+.latest img, .older img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.latest div, .older div {
+  margin: 10px;
+  box-shadow: 1px 1px 5px black;
+  border-radius: 10%;
+}
+
+.older {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.big_image img {
+  width: 100%;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  border: 2px white;
+}
+.stack p {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav span {
+  margin: 10px;
+}
+
+nav span:hover {
+  transform: scale(1.2);
+  animation-duration: 0.5;
+}
+
+footer span {
+  margin: 10px;
+}
+
+.LR {
+  position: absolute;
+}
+
+input[type=tel] {
+  border: 2px solid #e89b6a;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .latest, .older {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px;
+    flex-wrap: wrap;
+  }
+  .latest img, .older img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}/*# sourceMappingURL=lab03.css.map */
