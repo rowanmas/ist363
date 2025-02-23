@@ -30,7 +30,7 @@
       </ul>
     </div>
   </nav>
-  <p class="text-center text-warning fs-1 pt-4">Photographer's Portfolio</p>
+  <p class="text-center text-warning fs-1 pt-4 display-1">Photographer's Portfolio</p>
   <div id="carouselExample" class="carousel slide container-sm">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -70,12 +70,12 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-<div class="container-sm my-5 p-4 rounded" style="background-color: #eef3fc" style="max-width: 600px;">
-  <h2 class="text-center text-warning mb-4 py-2 fw-light"><i class="bi bi-stars"></i>Customer Reviews</h2>
+<div class="container-sm my-5 p-4 rounded bg-black">
+  <h2 class="text-center text-warning mb-4 py-2 fw-light display-6"><i class="bi bi-stars"></i>Customer Reviews</h2>
   <div class="row">
     <div class="col-md-4">
       <div class="card border-0 shadow-sm">
-        <div class="card-body">
+        <div class="card-body border border-info rounded">
           <h5 class="card-title fw-light">Amazing Work!</h5>
           <p class="card-text fw-light">Absolutely stunning photography, highly recommend!</p>
           <p class="text-success mb-0">★★★★★</p>
@@ -84,7 +84,7 @@
     </div>
     <div class="col-md-4">
       <div class="card border-0 shadow-sm">
-        <div class="card-body">
+        <div class="card-body border border-info rounded">
           <h5 class="card-title fw-light">Beautiful Pictures</h5>
           <p class="fw-light card-text">Captured the moment perfectly, great experience.</p>
           <p class="text-success mb-0">★★★★☆</p>
@@ -93,7 +93,7 @@
     </div>
     <div class="col-md-4">
       <div class="card border-0 shadow-sm">
-        <div class="card-body">
+        <div class="card-body border border-info rounded">
           <h5 class="card-title fw-light">Fantastic Service</h5>
           <p class="fw-light card-text">Very professional and high-quality work.</p>
           <p class="text-success mb-0">★★★★★</p>
@@ -102,9 +102,54 @@
     </div>
   </div>
 </div>
-<div class="px-4 container-sm" style="background-color: #dde7fa;">
-  <div class="container-sm" style="max-width: 600px;">
-    <h2 class="text-center text-warning fw-light">Get in Touch</h2>
+<div class="container-sm my-5">
+  <h2 class="text-warning fw-light display-6">FAQs</h2>
+
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+          What type of photography do you specialize in?
+        </button>
+      </h2>
+      <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          I specialize in portrait, wedding, and landscape photography.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+          Do you offer prints for sale?
+        </button>
+      </h2>
+      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes! I offer high-quality prints of my work. You can browse my online store to see available options.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+          How can I book a session?
+        </button>
+      </h2>
+      <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          You can book a session by contacting me through my website's contact form or emailing me directly.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="px-4 container-sm bg-black">
+  <div class="form-container">
+    <h2 class="text-center text-warning fw-light display-6">Get in Touch</h2>
     <p class="text-center text-muted fw-light">Questions to ask? Fill out the form to contact me directly...</p>
 
     <form class="mx-auto">
