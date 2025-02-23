@@ -46,9 +46,9 @@
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-primary-text-emphasis: #003300;
-  --bs-secondary-text-emphasis: #30383d;
+  --bs-secondary-text-emphasis: #2b2f32;
   --bs-success-text-emphasis: #0a3622;
-  --bs-info-text-emphasis: rgb(4, 14, 83);
+  --bs-info-text-emphasis: #055160;
   --bs-warning-text-emphasis: #664d03;
   --bs-danger-text-emphasis: #58151c;
   --bs-light-text-emphasis: #495057;
