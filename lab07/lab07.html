@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="example.js"></script>
+</head>
+<body>
+    <h1>Lab 07 - IST363 - Roawn Mastrangelo</h1>
+    <script>
+        // #1
+    let favNumber = 5;
+    console.log("My favorite number is " + favNumber + '.');
+
+        // #2
+    let favoriteFoods = ["pizza", "burger", "tacos", "ice cream"];
+    console.log(favoriteFoods[1]);
+    favoriteFoods.push("watermelon")
+    console.log(favoriteFoods);
+
+        // #3
+    for (let i=0; i < favoriteFoods.length; i++) {console.log("Favorite Food #" + [i+1] + ": " + favoriteFoods[i]);}
+
+        // #4
+    for (let i=0; i < favoriteFoods.length; i++) {if (favoriteFoods[i]==="burger")
+    {continue;} 
+    console.log("Favorite Food #" + [i+1] + ": " + favoriteFoods[i]);}
+       
+        // #5
+    let book = {
+        title: "James and the Giant Peach",
+        author: "Roald Dahl",
+        yearPublished: 1961,
+        isAvailable: true
+    };
+    for (let i=0; i < favoriteFoods.length; i++)
+    console.log(book.title + " - " + book.author);
+    if (book.isAvailable===true) {
+       console.log("This book is available for checkout");
+       } else if (book.isAvailable===false) {
+        console.log("Sorry, this book is currently checked out")
+       }
+    
+       // #6
+    let x = 2;
+    while (x < 21) {
+        console.log(x);
+        x +=2;
+    }
+        // #7
+    let randomNumber = Math.floor(Math.random() * 6)+1;
+    console.log(randomNumber)
+    </script>
+</body>
+</html>
