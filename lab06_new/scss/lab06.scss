@@ -7,4 +7,4 @@ $black:#eef3fc;
 $max-width-custom: 600px;
 .form-container {
     max-width: $max-width-custom; margin: 0 auto;}
-@import '../node_modules/bootstrap/dist/css/bootstrap';
+@import '../node_modules/bootstrap/scss/bootstrap'
