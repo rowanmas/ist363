@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Week 8</h1>
+    <p id="pone" class="odd">one</p>
+    <p class="even">two</p>
+    <p class="odd">three</p>
+
+    <form id="myForm">
+        <input type="text" name="fname" value="Rowan">
+        <input type="text" name="lname" value="Mastrangelo">
+        <input type="submit" value="send form">
+    </form>
+    <form id="dogForm">
+        <p><strong>Enter dog age</strong></p>
+        <p>Enter your dogs age in human years:</p>
+        <input type="text" name="dogage" value="">
+        <input type="submit" value="Calculate">
+    </form>
+    
+    <p>
+    <button id="myButton">Sign up</button>
+        </p>
+
+    <script>
+        
+
+        function dogYears(years){
+        return years*7;
+        }
+        let value = dogYears(10);
+        console.log("dog years" + value);
+//ways to traverse the DOM (getElementByID, getElementsByClassName, getElementsByTagName)
+        let picked = document.getElementById('p1');
+        console.log(picked);
+
+//getElementsByClassName --> returns array
+        let oddTags = document.getElementsByClassName('odd');
+        for (i = 0; i < oddTags.length; i++);{
+            console.log(oddTags[i]);
+        }
+        console.log('Below is log by tag name')
+        let pTags = document.getElementsByTagName('p');
+        for (i = 0; i < pTags.length; i++);{
+            console.log(pTags[i]);
+        }
+    //PARTICIAPTION
+    document.getElementById("dogForm").addEventListener(dogYears)
+    document.getElementById("result").innerHTML = `Name: ${name} <br> Email: ${email}`;
+
+    // getting element value from a form
+    console.log(document.getElementById("myForm").elements[0].value);
+
+    // changing text and HTML in tags
+    document.getElementById('pone').innerHTML = 'four'; //changes 'one' to 'four'
+    //change form value
+    document.getElementById("myForm").elements[0].value = 'Nawor';
+    //change a style
+    document.getElementById("pone").style.color = 'red';
+    document.getElementById('pone').style.textDecoration = 'underline';
+    document.getElementsByTagName('body')[0].style.backgroundColor = 'pink';
+    document.getElementById('myButton').addEventListener("click", myFunction);
+    function myFunction (){
+        alert("Hello!");
+    }
+    document.getElementById('dogForm').addEventListener("click", myDog);
+        function myDog(){        }
+        document.getElementById('pone').innerHTML = 'four'; //changes 'one' to 'four'
+
+
+
+
+    </script>
+</body>
+</html>
