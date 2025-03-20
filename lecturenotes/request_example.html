@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Our first request</h1>
+    <div id="data"></div>
+
+
+    <script>
+        // STEP 4 use data
+        function reportResults (response) {
+            let browserData = 'NA';
+            //console.log(response);
+            if (response != 'error') {
+                const myData = JSON.parse(response);    // changes text to arrays and object
+                //console.log(myData);
+                for (i=0; i< myData.length; i++){       // looping JSON parsed array
+                    //console.log(myData[i].title);
+                    browserData = browserData + myData[i].title + '<br>'; //adding to the variable = to title text
+                }
+            }
+            document.getElementById('data').innerHTML = browserData;
+        }
+
+        endpoint = 'https://jsonplaceholder.typicode.com/todos/'
+        // STEP 1 make a request object
+        const request = new XMLHttpRequest();
+        
+        // STEP 2 check the status of request
+        request.addEventListener('readystatechange', () => { // listening for a state change
+            if (request.readyState === 4 && request.status === 200){    // if request complete (4) and data loaded (200)
+                //console.log(request, request.responseText);                     // log what came back
+                reportResults(request.responseText);
+            } else if (request.readyState === 4){                       // if finished and did not get status 200
+                //console.log('could not get data')
+                reportResults('error');
+            }
+            //console.log(request, request.readyState)
+
+        })
+
+        // STEP 3 open endpoint and send request
+        request.open('GET', endpoint);          // setup kind of request and endpoint
+        request.send();                         // actually getting data
+
+//participation
+console.log(parsedData.product);
+console.log(parsedData.specs.brand)
+console.log(parsedData.features[0])
+    </script>
+</body>
+</html>
