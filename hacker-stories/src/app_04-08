@@ -1,0 +1,53 @@
+import { useState } from "react";
+import About from "./About";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function Home() {
+  return (
+    <div className="container mt-4">
+      <h1 className="text-primary">Home Page</h1>
+      <p>Welcome to the home page! This is styled with Bootstrap.</p>
+    </div>
+  );
+}
+
+function App() {
+  const [page, setPage] = useState("home");
+
+  return (
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+      {/* Navbar fixed to top */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-4">
+        <a className="navbar-brand" href="#">My App</a>
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <button
+                className={`nav-link btn btn-link ${page === "home" ? "active text-white" : "text-light"}`}
+                onClick={() => setPage("home")}
+              >
+                Home
+              </button>
+            </li>
+            <li className="nav-item">
+              <button
+                className={`nav-link btn btn-link ${page === "about" ? "active text-white" : "text-light"}`}
+                onClick={() => setPage("about")}
+              >
+                About
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Page content with padding to avoid overlapping navbar */}
+      <main className="flex-grow-1 pt-5">
+        {page === "home" && <Home />}
+        {page === "about" && <About />}
+      </main>
+    </div>
+  );
+}
+
+export default App;
